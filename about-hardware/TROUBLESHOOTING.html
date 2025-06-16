@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solving common VizLab problems &mdash; vizlab-docs 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a6a68382" />
+      <link rel="stylesheet" type="text/css" href="../_static/fonts.css?v=5583d106" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="About software" href="../about-software/README.html" />
+    <link rel="prev" title="VizLab hardware overview" href="OVERVIEW.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vizlab-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="README.html">About hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="OVERVIEW.html">VizLab hardware overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solving common VizLab problems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display">Display</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#portions-of-the-vizlab-screen-are-black">Portions of the VizLab screen are black!</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tracking">Tracking</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-tracking-is-slow-to-recognize-trackables-or-it-isn-t-recognizing-the-trackables-at-all">The tracking is slow to recognize trackables (or it isn’t recognizing the trackables at all)!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-can-t-connect-to-the-art-tracking-web-server">I can’t connect to the ART tracking web server!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i-need-to-replace-my-trackables">I need to replace my trackables!</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#audio">Audio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#there-s-no-sound-coming-out-of-the-speakers">There’s no sound coming out of the speakers!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about-software/README.html">About software</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vizlab-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="README.html">About hardware</a></li>
+      <li class="breadcrumb-item active">Solving common VizLab problems</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/about-hardware/TROUBLESHOOTING.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="solving-common-vizlab-problems">
+<h1>Solving common VizLab problems<a class="headerlink" href="#solving-common-vizlab-problems" title="Link to this heading"></a></h1>
+<section id="display">
+<h2>Display<a class="headerlink" href="#display" title="Link to this heading"></a></h2>
+<section id="portions-of-the-vizlab-screen-are-black">
+<h3>Portions of the VizLab screen are black!<a class="headerlink" href="#portions-of-the-vizlab-screen-are-black" title="Link to this heading"></a></h3>
+<p>This error comes about when one or more of the zones managed by the seven video controllers fall out of sync with the rest of the configuration. To fix this, you’ll want to do a reboot of the video controller system (which is separate from rebooting the main VizLab computer through Windows).</p>
+<p>To do that, we’ll use the Planar WallDirector software. The video controller system manages an IP address, and accessing the software is as simple as typing that address into a browser to connect to it. You can find the IP address on the front of each of the seven video controllers on the rack.</p>
+<a class="reference external image-reference" href="/images/videoControllers.jpg"><img alt="image" src="../_images/videoControllers.jpg" />
+</a>
+<p>Once you’ve entered the address, you’ll likely get warned that the connection is not private. To advance, click ‘Advanced’ then ‘Proceed to IP (unsafe)’.</p>
+<a class="reference external image-reference" href="/images/connectionIsNotPrivate.png"><img alt="image" src="../_images/connectionIsNotPrivate.png" />
+</a>
+<p>You’ll then be asked to sign in to access the software. The username and password are both <code class="docutils literal notranslate"><span class="pre">admin</span></code>.</p>
+<a class="reference external image-reference" href="/images/wallDirectorLogin.PNG"><img alt="image" src="../_images/wallDirectorLogin.PNG" />
+</a>
+<p>From there, you’ll be brought to a screen that summarizes the state of the display configuration. By switching tabs in the top left, you should be able to switch between the 35 screens as well as the 14 ‘display zones’ those screens get combined into for rendering purposes. If a zone or video controller is out of sync, you’ll likely see a yellow caution symbol on the screen or zone with the software saying that either an input or output to that display is not found.</p>
+<a class="reference external image-reference" href="/images/wallDirectorPresets.PNG"><img alt="image" src="../_images/wallDirectorPresets.PNG" />
+</a>
+<a class="reference external image-reference" href="/images/wallDirectorMonitors.PNG"><img alt="image" src="../_images/wallDirectorMonitors.PNG" />
+</a>
+<p>To fix this, you’ll want to navigate to the top left and click ‘System reboot’. The screens may take a minute to reset, each cycling through their PLANAR boot loop one or more times. With patience, the entire configuration will reset and all the screens should be working again!</p>
+<a class="reference external image-reference" href="/images/wallDirectorReset.PNG"><img alt="image" src="../_images/wallDirectorReset.PNG" />
+</a>
+</section>
+</section>
+<section id="tracking">
+<h2>Tracking<a class="headerlink" href="#tracking" title="Link to this heading"></a></h2>
+<section id="the-tracking-is-slow-to-recognize-trackables-or-it-isn-t-recognizing-the-trackables-at-all">
+<h3>The tracking is slow to recognize trackables (or it isn’t recognizing the trackables at all)!<a class="headerlink" href="#the-tracking-is-slow-to-recognize-trackables-or-it-isn-t-recognizing-the-trackables-at-all" title="Link to this heading"></a></h3>
+<p>The DTrack3 software is quite helpful here. To start, make sure the tracking is recognizing both trackables in the space. On the top left you should see two different bodies: the first is the glasses, the second is the controller. When each body isn’t found in the space, their ID’s are red, but when it’s properly tracking you’ll see green instead along with the 6 degrees of freedom tracking info.</p>
+<a class="reference external image-reference" href="/images/DTrack3Running.PNG"><img alt="image" src="../_images/DTrack3Running.PNG" />
+</a>
+<a class="reference external image-reference" href="/images/DTrack3RunningAndTracking.PNG"><img alt="image" src="../_images/DTrack3RunningAndTracking.PNG" />
+</a>
+<p>If the tracking is still an issue, it’s likely that one of the four mounted trackers was bumped. To fix this, you’ll need to do a room recalibration so the trackers have an agreed-upon sense of scale.</p>
+<p>To do this, start by retrieving the ART pelican case in the VizLab closet.</p>
+<a class="reference external image-reference" href="/images/trackingCase.jpg"><img alt="image" src="../_images/trackingCase.jpg" />
+</a>
+<p>The case contains an angle piece and a wand, each with reflective tracker markers. The angle piece sets the origin for the tracked room. You’ll need to place it at a specific position and angle along the floor. Look for dots marked into the floor to help your alignment here!</p>
+<a class="reference external image-reference" href="/images/roomCalibrationAngleHoles.jpg"><img alt="image" src="../_images/roomCalibrationAngleHoles.jpg" />
+</a>
+<a class="reference external image-reference" href="/images/roomCalibrationAngle.jpg"><img alt="image" src="../_images/roomCalibrationAngle.jpg" />
+</a>
+<p>Once the angle piece is set, you’ll want to screw the wand together. This wand has two tracker balls at a fixed distance apart.</p>
+<a class="reference external image-reference" href="/images/roomCalibrationWand.jpg"><img alt="image" src="../_images/roomCalibrationWand.jpg" />
+</a>
+<p>Once you’re set with the two pieces, start the room calibration by going to Tracking -&gt; Room calibration in DTrack3. You’ll want to make sure the camera’s view of the angle piece is unobstructed by any incident reflections in the environment. You can manually hide regions, but putting a rug underneath the angle piece has led to good results for me. From there, hit ‘Start’ and get ready to spin the wand around. The software is assembling a point cloud that lets it understand the room and what the tracker cameras are looking at.</p>
+<p>In extreme situations, you can consider recalibrating one or both trackables to get better performance. To start, get to the Body Calibration menu within DTrack3. You can switch between different bodies; standard body 01 is the glasses, standard body 02 is the controller.</p>
+<a class="reference external image-reference" href="/images/DTrack3Calibration.PNG"><img alt="image" src="../_images/DTrack3Calibration.PNG" />
+</a>
+<p>Start by saving a backup of the current calibration file for each body that you’ll be recalibrating; we’ll need to compare the new file against the old one later on in the process. Once you’ve done that, you’ll need to have the body you’d like to recalibrate within the tracking space, then press Calibrate to start generating a new set of tracking positions. This may be a tedious process because of incident reflections in the space. On each camera view you have numbers on the top: the left one is any recorded reflections, the right one is reflections that DTrack3 is confident belong to a tracking ball. You want to minimize the number of incident reflections and maximize DTrack3’s confidence it’s finding tracking balls to get the best result!</p>
+<a class="reference external image-reference" href="/images/DTrack3CameraViews.PNG"><img alt="image" src="../_images/DTrack3CameraViews.PNG" />
+</a>
+<p>Once you’ve got a new tracking configuration, you now need to match the coordinate system in the new configuration to that of the old configuration. This is done through the Body Adjustment panel in DTrack3 by tweaking the body position and the body orientation.</p>
+<a class="reference external image-reference" href="/images/DTrack3BodyAdjustment.PNG"><img alt="image" src="../_images/DTrack3BodyAdjustment.PNG" />
+</a>
+<p>The best way to get the two to agree is by switching between the old and the new config and using the getReal3D for Unity launcher to see how well they agree. To set that up, head over to the getReal3D for Unity launcher and look at the current screen configuration (look at the HALFPIPE page and press the notepad at the bottom left). From there, navigate to the Tracking panel. Here you can see real-time visualizations of both the glasses and the controller in space.</p>
+<a class="reference external image-reference" href="/images/launcherTracking.PNG"><img alt="image" src="../_images/launcherTracking.PNG" />
+</a>
+<a class="reference external image-reference" href="/images/launcherTrackingCloseup.PNG"><img alt="image" src="../_images/launcherTrackingCloseup.PNG" />
+</a>
+</section>
+<section id="i-can-t-connect-to-the-art-tracking-web-server">
+<h3>I can’t connect to the ART tracking web server!<a class="headerlink" href="#i-can-t-connect-to-the-art-tracking-web-server" title="Link to this heading"></a></h3>
+<p>If you’re experiencing this, the best course of action is to reboot the ART tracking controller on the server rack. To do this, head over to the VizLab computing closet, find the tracking controller pictured below, and flip the power switch to off and back to on again.</p>
+<a class="reference external image-reference" href="/images/trackingController.jpg"><img alt="image" src="../_images/trackingController.jpg" />
+</a>
+</section>
+<section id="i-need-to-replace-my-trackables">
+<h3>I need to replace my trackables!<a class="headerlink" href="#i-need-to-replace-my-trackables" title="Link to this heading"></a></h3>
+<p>If you’re looking to make new tracking frames for the glasses or controller, you can find relevant CAD files and design docs here. These were put together by Julian Garcia here at Carnegie, so thank him if you can!</p>
+<p>If you need to replace the metallic tracking balls, you’re looking for <a class="reference external" href="https://optitrack.com/accessories/markers/#mcm-19.0-m4-10">the 3/4” M4 markers found on Optitrack’s website.</a></p>
+</section>
+</section>
+<section id="audio">
+<h2>Audio<a class="headerlink" href="#audio" title="Link to this heading"></a></h2>
+<section id="there-s-no-sound-coming-out-of-the-speakers">
+<h3>There’s no sound coming out of the speakers!<a class="headerlink" href="#there-s-no-sound-coming-out-of-the-speakers" title="Link to this heading"></a></h3>
+<p>Make sure the Integra receiver is set to TV mode and the VizLab computer is set to output audio along ‘Digital output’ on the Xonar sound card. In case you can’t hear it because the sound is too quiet, a good starting sound level is 100% on the digital output and 50% on the receiver.</p>
+<a class="reference external image-reference" href="/images/integraReceiver.jpg"><img alt="image" src="../_images/integraReceiver.jpg" />
+</a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="OVERVIEW.html" class="btn btn-neutral float-left" title="VizLab hardware overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../about-software/README.html" class="btn btn-neutral float-right" title="About software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Chris Couto.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
