@@ -61,14 +61,20 @@ Running system-specific software
 
 The VizLab also has system-specific software that takes full advantage of its capabilities. To get that running, read on!
 
+These steps involve getting a series of different applications running on the system. For convenience, you can find all of the applications you'll need on the desktop (on the leftmost monitor on the desk). 
+
+.. image:: /images/allAppsOnDesktop.PNG
+   :target: /images/allAppsOnDesktop.PNG
+   :alt: image
+
+
 (3) Start getReal3D for Unity daemon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Find 'getReal3D for Unity daemon' in the Windows Start menu (either by typing the name in or finding it in the subfolder GetReal3D for Unity 4) and click on it. Once you click, you should see a terminal window pop up initially, but that will go away, and the application will run minimized in the system tray.
+We'll start by running the getReal3D daemon, which is the first application in the set from above. Double-click to open it; you should see a window open and then close, as it will minimize itself to run silently in the system tray.
 
-
-.. image:: /images/daemonSearch.png
-   :target: /images/daemonSearch.png
+.. image:: /images/daemonOnDesktop.PNG
+   :target: /images/daemonOnDesktop.PNG
    :alt: image
 
 
@@ -83,11 +89,10 @@ Once you see it running in the tray (as shown below, in the bottom left of the l
 (4) Start DTrack3 and connect controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now we need to get the tracking up and running. To do that, launch the DTrack3 application, which you can find pinned to the taskbar with the icon shown below.
+Now we need to get the tracking software up and running. To do that, launch the DTrack3 application (the second in our set).
 
-
-.. image:: /images/DTrack3Icon.PNG
-   :target: /images/DTrack3Icon.PNG
+.. image:: /images/DTrackOnDesktop.PNG
+   :target: /images/DTrackOnDesktop.PNG
    :alt: image
 
 
@@ -99,9 +104,7 @@ You'll need to connect to the tracking controller to open the application proper
    :alt: image
 
 
-When the software opens, it might open across the entire VizLab screen. The screens on the control desk are connected to the VizLab screens, so to reach the window move the mouse cursor through the bottom of the screens on the control desk and you should end up towards the top of the VizLab screens. Once you've navigated to the window, grab the top of it and drag it back to the control desk screens. While you're dragging the window, moving the cursor to the top of the control desk screens and releasing your click will 'snap' the window to the size of the current monitor.
-
-Lastly if the tracking isn't running (shown by two bodies and the 'Start' button replaced with 'Stop' as in the second image) you might need to press start at the top of the window so the tracking camera can see within the space.
+If the tracking isn't running (shown by two bodies and the 'Start' button replaced with 'Stop' as in the second image) you might need to press 'Start' at the top of the window so the tracking camera can see within the space.
 
 
 .. image:: /images/DTrack3NotRunning.PNG
@@ -117,22 +120,20 @@ Lastly if the tracking isn't running (shown by two bodies and the 'Start' button
 (5) Start trackd middleware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-DTrack3 does the actual tracking, but to pass this information along with controller button presses, you need to be running trackd as well. Like DTrack3, you can find this pinned to the taskbar - click on its icon to open it.
+DTrack3 does the actual tracking, but to pass this information along with controller button presses, you need to be running trackd as well. Like DTrack3, you can find this on the desktop (the third in our set).
 
-
-.. image:: /images/trackdIcon.PNG
-   :target: /images/trackdIcon.PNG
+.. image:: /images/trackdOnDesktop.PNG
+   :target: /images/trackdOnDesktop.PNG
    :alt: image
 
-
-It might prompt you to connect the controller: to do that, just press any of the colored buttons on the front and it should pair automatically. If the controller is connected and DTrack3 is running, dtrack should start printing state for both the glasses and the controller. To verify that controller inputs are coming in properly, press a button or move one of the control sticks and you should see that information update in dtrack in real time.
+It might prompt you to connect the controller, as shown below: to connect it, just press any of the colored buttons on its front and it should pair automatically.
 
 
 .. image:: /images/trackdWaitingForInput.PNG
    :target: /images/trackdWaitingForInput.PNG
    :alt: image
 
-
+ If the controller is connected and DTrack3 is running, dtrack should start printing state for both the glasses and the controller. To verify that controller inputs are coming in properly, press a button or move one of the control sticks and you should see that information update in dtrack in real time.
 
 .. image:: /images/trackdReceivedInput.PNG
    :target: /images/trackdReceivedInput.PNG
@@ -142,15 +143,15 @@ It might prompt you to connect the controller: to do that, just press any of the
 (6) Start launcher and run application!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The last step is using the getReal3D for Unity launcher to launch your Unity app of choice! This should be pinned to the taskbar, find it with the icon below:
+The last step is using the getReal3D for Unity launcher to launch your Unity app of choice! This is the fourth and final relevant application on the desktop:
 
 
-.. image:: /images/launcherIcon.PNG
-   :target: /images/launcherIcon.PNG
+.. image:: /images/launcherOnDesktop.PNG
+   :target: /images/launcherOnDesktop.PNG
    :alt: image
 
 
-Once it's open, you'll see a list. If you want to add a new application, you can press the plus at the bottom left and navigate to the correct .exe file.
+Once it's open, you'll see a list of VizLab applications that you can run. If you want to add a new application, you can press the plus at the bottom left and navigate to the correct .exe file.
 
 
 .. image:: /images/launcherOverview.PNG
@@ -185,3 +186,9 @@ Make sure you're running trackd if you see this!
 This means you're (probably) all good to go! Note that the launcher doesn't throw an error or warning if DTrack3 isn't running, so if the application starts and the tracking isn't working, start there!
 
 Now that you've set up the VizLab, you're ready to run software! Running 'vizlab-core' in the launcher will start up our main visualization package. For a full list of software available to run, `check out the PREBUILTSCENES page. </about-software/PREBUILTSCENES.md>`_
+
+Once you're done with your VizLab software of choice, you can use the launcher to stop it from running and taking up the main display.
+
+.. image:: /images/launcherStopButton.PNG
+   :target: /images/launcherStopButton.PNG
+   :alt: image
