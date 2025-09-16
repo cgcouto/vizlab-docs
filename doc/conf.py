@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'vizlab-docs'
-copyright = '2025, Chris Couto'
+copyright = '2025, Carnegie Science'
 author = 'Chris Couto'
 release = '1.0'
 
@@ -26,3 +26,6 @@ exclude_patterns = []
 
 html_theme = 'renku'
 html_static_path = ['_static']
+html_theme_options = {
+    'prev_next_buttons_location': None
+}

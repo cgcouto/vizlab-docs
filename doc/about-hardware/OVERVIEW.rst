@@ -1,5 +1,5 @@
 
-VizLab hardware overview
+Hardware overview
 ========================
 
 Computer system
