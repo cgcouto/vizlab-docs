@@ -21,6 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SDSS tour" href="SDSSTOUR.html" />
     <link rel="prev" title="Hubble deep field galaxies" href="DEEPFIELDS.html" /> 
 </head>
 
@@ -47,7 +48,8 @@
 <li class="toctree-l1"><a class="reference internal" href="QUICKSTART.html">System quick-start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about-hardware/README.html">About hardware</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="SOFTWAREINDEX.html">Software index</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="STELLARSTREAMS.html">Stellar streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DATAVIZ.html">Data visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="STELLARSTREAMS.html">Milky Way stellar streams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DEEPFIELDS.html">Hubble deep field galaxies</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">N-body simulator game</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-run">How to run</a></li>
@@ -55,6 +57,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#the-science">The science</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="SDSSTOUR.html">SDSS tour</a></li>
 </ul>
 </li>
 </ul>
@@ -86,34 +89,38 @@
              
   <section id="n-body-simulator-game">
 <h1>N-body simulator game<a class="headerlink" href="#n-body-simulator-game" title="Link to this heading"></a></h1>
-<a class="reference external image-reference" href="/images/galaxiesScreenshot.jpg"><img alt="image" src="../_images/galaxiesScreenshot.jpg" />
-</a>
 <section id="how-to-run">
 <h2>How to run<a class="headerlink" href="#how-to-run" title="Link to this heading"></a></h2>
-<p>As with the other scens, follow <a class="reference external" href="QUICKSTART.md">the quick-start guide</a> first. Once you’ve done that, launch the scene titled <em>nbody-stellarstreams</em>.</p>
-<p>One thing to note is that this scene has audio (music and sound effects) -</p>
+<p>You can run this software through the Unity app launcher, its title is <em>nbody-stellarstreams</em>. Please consult the <a class="reference internal" href="QUICKSTART.html"><span class="doc">quick-start guide</span></a> if you are having trouble!</p>
+<p><strong>Note: This activity has built-in music!</strong> To make use of it, make sure the system audio is on (consult the relevant troubleshooting section if it isn’t).</p>
 </section>
 <section id="how-to-control">
 <h2>How to control<a class="headerlink" href="#how-to-control" title="Link to this heading"></a></h2>
-<p>The controls are the same as the stellar streams scene:</p>
-<a class="reference external image-reference" href="/images/prebuiltScenesControlScheme.png"><img alt="image" src="../_images/prebuiltScenesControlScheme.png" />
+<p>When you launch the software, you’ll be presented with a main menu. There are two modes available: free play and arcade, each with a different set of controls.</p>
+<a class="reference external image-reference" href="/images/nBodyMainMenu.jpg"><img alt="image" src="../_images/nBodyMainMenu.jpg" />
 </a>
-<p>Because the simulated space is so large though, you’ll probably want to go into the menu and set the translation speed and rotation speed sliders to high values. This will give a much better sense of scale!</p>
-<a class="reference external image-reference" href="/images/sceneMenu.jpg"><img alt="image" src="../_images/sceneMenu.jpg" />
+<p>Starting off with free play, here the player is given free rein to launch bodies and shape the simulation in a number of ways.</p>
+<a class="reference external image-reference" href="/images/controlSchemeNBodyFreePlay.png"><img alt="image" src="../_images/controlSchemeNBodyFreePlay.png" />
+</a>
+<p>Holding the blue button brings up a radial menu with a set of options. The ball shoot icon toggles body shoot mode, the weight icon toggles self-particle mode (where the player itself becomes a body in the n-body simulation), the refresh icon removes all bodies, the settings icon opens the settings menu, and the back button quits free play mode and takes you back to the main menu from before.</p>
+<a class="reference external image-reference" href="/images/nBodyFreePlayRadial.jpg"><img alt="image" src="../_images/nBodyFreePlayRadial.jpg" />
+</a>
+<p>When shoot mode is on, the player can choose between three bodies to shoot using the d-pad: the small (green) bodies, the large (red) bodies and a blue body which shoots a bunch of small bodies at once. They all gravitate around the central Sun body.</p>
+<a class="reference external image-reference" href="/images/nBodyFreePlayBodies.jpg"><img alt="image" src="../_images/nBodyFreePlayBodies.jpg" />
+</a>
+<p>The other option on the main menu is the arcade mode. When this is selected, the player gets 30 seconds to shoot bodies and get as many orbiting around the central Sun as possible.</p>
+<a class="reference external image-reference" href="/images/controlSchemeNBodyArcade.png"><img alt="image" src="../_images/controlSchemeNBodyArcade.png" />
+</a>
+<p>Only the large bodies are enabled in this mode, as they are sufficiently massive to impact the trajectories of other red bodies, making it more challenging to have many bodies orbiting around the Sun at once.</p>
+<a class="reference external image-reference" href="/images/nBodyGameRunning.jpg"><img alt="image" src="../_images/nBodyGameRunning.jpg" />
+</a>
+<p>When the timer runs out, the game ends and reports the final number of bodies orbiting the central Sun. If a high score is achieved, the player is prompted to enter a three character name for themselves; this gets logged into the software’s record automatically!</p>
+<a class="reference external image-reference" href="/images/nBodyGameOver.jpg"><img alt="image" src="../_images/nBodyGameOver.jpg" />
 </a>
 </section>
 <section id="the-science">
 <h2>The science<a class="headerlink" href="#the-science" title="Link to this heading"></a></h2>
-<p>The galaxies shown in the scene come from the <a class="reference external" href="https://esahubble.org/images/heic0611b/">Hubble Ultra Deep Field</a> taken in 2006 and depicted below.</p>
-<a class="reference external image-reference" href="/images/hubbleUltraDeepField.jpg"><img alt="image" src="../_images/hubbleUltraDeepField.jpg" />
-</a>
-<p>Here’s a relevant passage quoted from the ESA Hubble site linked above:</p>
-<blockquote>
-<div><p>“This view of nearly 10,000 galaxies is called the Hubble Ultra Deep Field. The snapshot includes galaxies of various ages, sizes, shapes, and colours. The smallest, reddest galaxies, about 100, may be among the most distant known, existing when the universe was just 800 million years old. The nearest galaxies - the larger, brighter, well-defined spirals and ellipticals - thrived about 1 billion years ago, when the cosmos was 13 billion years old.”</p>
-<p>“The image required 800 exposures taken over the course of 400 Hubble orbits around Earth. The total amount of exposure time was 11.3 days, taken between Sept. 24, 2003 and Jan. 16, 2004.”</p>
-</div></blockquote>
-<p>This image was processed using Python (scipy and scikit-image specifically), first by getting a binary mask of the non-black regions and then segmenting and cleaning the resulting galaxies. This resulted in about ~400 galaxy sprites, and out of this group the scene places 1 million galaxies randomly in a sufficiently large box.</p>
-<p>There are some limitations of this scene worth addressing. Because the galaxies are placed randomly in a box, (1) the scene is less scientifically accurate and more evocative of deep space and (2) you can hit the ‘edge of space’, so to speak, where no more galaxies are generated outside of the box. You also might notice some artifacts where two or more galaxies are segmented together as one. Due to the basic image processing workflow described previously, if galaxies are overlapping in the image they get segmented together. Perhaps there are some more advanced image processing techniques that could solve this problem!</p>
+<p>The motion of all bodies in the simulation is computed each frame using a direct all-pairs approach in three dimensions. This implementation is not super performant, and players will notice the software start to lag at around 100 bodies. Changing the n-body simulation to use a more efficient algorithm like Barnes-Hut would be a good avenue for improvement!</p>
 </section>
 </section>
 

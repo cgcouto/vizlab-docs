@@ -1,58 +1,59 @@
 N-body simulator game
 ---------------------
 
-
-.. image:: /images/galaxiesScreenshot.jpg
-   :target: /images/galaxiesScreenshot.jpg
-   :alt: image
-
-
 How to run
 ^^^^^^^^^^
 
-As with the other scens, follow `the quick-start guide <QUICKSTART.md>`_ first. Once you've done that, launch the scene titled *nbody-stellarstreams*. 
+You can run this software through the Unity app launcher, its title is *nbody-stellarstreams*. Please consult the :doc:`quick-start guide </about-software/QUICKSTART>` if you are having trouble!
 
-One thing to note is that this scene has audio (music and sound effects) -  
+**Note: This activity has built-in music!** To make use of it, make sure the system audio is on (consult the relevant troubleshooting section if it isn't).
 
 How to control
 ^^^^^^^^^^^^^^
 
-The controls are the same as the stellar streams scene:
+When you launch the software, you'll be presented with a main menu. There are two modes available: free play and arcade, each with a different set of controls.
 
-
-.. image:: /images/prebuiltScenesControlScheme.png
-   :target: /images/prebuiltScenesControlScheme.png
+.. image:: /images/nBodyMainMenu.jpg
+   :target: /images/nBodyMainMenu.jpg
    :alt: image
 
+Starting off with free play, here the player is given free rein to launch bodies and shape the simulation in a number of ways.
 
-Because the simulated space is so large though, you'll probably want to go into the menu and set the translation speed and rotation speed sliders to high values. This will give a much better sense of scale!
-
-
-.. image:: /images/sceneMenu.jpg
-   :target: /images/sceneMenu.jpg
+.. image:: /images/controlSchemeNBodyFreePlay.png
+   :target: /images/controlSchemeNBodyFreePlay.png
    :alt: image
 
+Holding the blue button brings up a radial menu with a set of options. The ball shoot icon toggles body shoot mode, the weight icon toggles self-particle mode (where the player itself becomes a body in the n-body simulation), the refresh icon removes all bodies, the settings icon opens the settings menu, and the back button quits free play mode and takes you back to the main menu from before.
+
+.. image:: /images/nBodyFreePlayRadial.jpg
+   :target: /images/nBodyFreePlayRadial.jpg
+   :alt: image
+
+When shoot mode is on, the player can choose between three bodies to shoot using the d-pad: the small (green) bodies, the large (red) bodies and a blue body which shoots a bunch of small bodies at once. They all gravitate around the central Sun body.
+
+.. image:: /images/nBodyFreePlayBodies.jpg
+   :target: /images/nBodyFreePlayBodies.jpg
+   :alt: image
+
+The other option on the main menu is the arcade mode. When this is selected, the player gets 30 seconds to shoot bodies and get as many orbiting around the central Sun as possible.
+
+.. image:: /images/controlSchemeNBodyArcade.png
+   :target: /images/controlSchemeNBodyArcade.png
+   :alt: image
+
+Only the large bodies are enabled in this mode, as they are sufficiently massive to impact the trajectories of other red bodies, making it more challenging to have many bodies orbiting around the Sun at once.
+
+.. image:: /images/nBodyGameRunning.jpg
+   :target: /images/nBodyGameRunning.jpg
+   :alt: image
+
+When the timer runs out, the game ends and reports the final number of bodies orbiting the central Sun. If a high score is achieved, the player is prompted to enter a three character name for themselves; this gets logged into the software's record automatically!
+
+.. image:: /images/nBodyGameOver.jpg
+   :target: /images/nBodyGameOver.jpg
+   :alt: image
 
 The science
 ^^^^^^^^^^^
 
-The galaxies shown in the scene come from the `Hubble Ultra Deep Field <https://esahubble.org/images/heic0611b/>`_ taken in 2006 and depicted below.
-
-
-.. image:: /images/hubbleUltraDeepField.jpg
-   :target: /images/hubbleUltraDeepField.jpg
-   :alt: image
-
-
-Here's a relevant passage quoted from the ESA Hubble site linked above:
-
-..
-
-   "This view of nearly 10,000 galaxies is called the Hubble Ultra Deep Field. The snapshot includes galaxies of various ages, sizes, shapes, and colours. The smallest, reddest galaxies, about 100, may be among the most distant known, existing when the universe was just 800 million years old. The nearest galaxies - the larger, brighter, well-defined spirals and ellipticals - thrived about 1 billion years ago, when the cosmos was 13 billion years old."
-
-   "The image required 800 exposures taken over the course of 400 Hubble orbits around Earth. The total amount of exposure time was 11.3 days, taken between Sept. 24, 2003 and Jan. 16, 2004."
-
-
-This image was processed using Python (scipy and scikit-image specifically), first by getting a binary mask of the non-black regions and then segmenting and cleaning the resulting galaxies. This resulted in about ~400 galaxy sprites, and out of this group the scene places 1 million galaxies randomly in a sufficiently large box.
-
-There are some limitations of this scene worth addressing. Because the galaxies are placed randomly in a box, (1) the scene is less scientifically accurate and more evocative of deep space and (2) you can hit the 'edge of space', so to speak, where no more galaxies are generated outside of the box. You also might notice some artifacts where two or more galaxies are segmented together as one. Due to the basic image processing workflow described previously, if galaxies are overlapping in the image they get segmented together. Perhaps there are some more advanced image processing techniques that could solve this problem!
+The motion of all bodies in the simulation is computed each frame using a direct all-pairs approach in three dimensions. This implementation is not super performant, and players will notice the software start to lag at around 100 bodies. Changing the n-body simulation to use a more efficient algorithm like Barnes-Hut would be a good avenue for improvement!

@@ -11,3 +11,4 @@ This section collects resources about all the specialized software that has been
    STELLARSTREAMS 
    DEEPFIELDS 
    NBODYGAME
+   SDSSTOUR

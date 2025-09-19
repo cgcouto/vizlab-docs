@@ -1,5 +1,5 @@
-Stellar streams
----------------
+Milky Way stellar streams
+-------------------------
 
 
 .. image:: /images/subhalosScreenshot.jpg
