@@ -11,3 +11,4 @@ This section contains a series of tutorials for loading and visualizing differen
 
     pointclouds-basic/POINTCLOUDS-BASIC
     pointclouds-advanced/POINTCLOUDS-ADVANCED
+    volumes-basic/VOLUMES-BASIC

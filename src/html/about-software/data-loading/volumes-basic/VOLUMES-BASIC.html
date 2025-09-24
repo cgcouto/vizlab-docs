@@ -20,7 +20,9 @@
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Milky Way stellar streams" href="../../STELLARSTREAMS.html" />
+    <link rel="prev" title="Point clouds - advanced" href="../pointclouds-advanced/POINTCLOUDS-ADVANCED.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,10 +44,26 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../QUICKSTART.html">System quick-start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about-hardware/README.html">About hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../SOFTWAREINDEX.html">Software index</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../SOFTWAREINDEX.html">Software index</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../DATAVIZ.html">Data visualization</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../USERGUIDE.html">User guide</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../DATALOADING.html">Data loading tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../pointclouds-basic/POINTCLOUDS-BASIC.html">Point clouds - basic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pointclouds-advanced/POINTCLOUDS-ADVANCED.html">Point clouds - advanced</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Volumes - basic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../STELLARSTREAMS.html">Milky Way stellar streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DEEPFIELDS.html">Hubble deep field galaxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../NBODYGAME.html">N-body simulator game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SDSSTOUR.html">SDSS tour</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -62,6 +80,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../SOFTWAREINDEX.html">Software index</a></li>
+          <li class="breadcrumb-item"><a href="../../DATAVIZ.html">Data visualization</a></li>
+          <li class="breadcrumb-item"><a href="../DATALOADING.html">Data loading tutorials</a></li>
       <li class="breadcrumb-item active">Volumes - basic</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/about-software/data-loading/volumes-basic/VOLUMES-BASIC.rst.txt" rel="nofollow"> View page source</a>
@@ -76,35 +97,22 @@
 <h1>Volumes - basic<a class="headerlink" href="#volumes-basic" title="Link to this heading"></a></h1>
 <section id="get-the-dataset">
 <h2>Get the dataset<a class="headerlink" href="#get-the-dataset" title="Link to this heading"></a></h2>
-<p>The dataset is based off Gala tutorials for a stellar stream. <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>You can access all the materials for this tutorial at the Google Drive link below (carnegiescience.edu account required):</p>
-<p><a class="reference external" href="https://drive.google.com/drive/folders/1v5mUzmIXssltbZ5YfNYQL9JK7ly6AFdH?usp=sharing">https://drive.google.com/drive/folders/1v5mUzmIXssltbZ5YfNYQL9JK7ly6AFdH?usp=sharing</a></p>
-<p>The starting dataset is called ‘pointcloud-basic.npz’. It contains a set of stellar stream positions obtained from a MockStreamGenerator run in Gala, along with the magnitude of the velocity for each star in the stream.</p>
+<p><a class="reference external" href="https://drive.google.com/drive/folders/16f4r4iVylHWRFjsWtCymufFjGvKVTc8f?usp=drive_link">https://drive.google.com/drive/folders/16f4r4iVylHWRFjsWtCymufFjGvKVTc8f?usp=drive_link</a></p>
+<p>The starting dataset is called ‘orb.h5’. It contains a 3D density array that, when visualized, depicts a colored spherical orb.</p>
 </section>
 <section id="process-such-that-it-is-compatible">
 <h2>Process such that it is compatible<a class="headerlink" href="#process-such-that-it-is-compatible" title="Link to this heading"></a></h2>
-<p>You can run the Python script pointcloud-basic-preprocess.py to convert the npy file into a valid HDF5 file. All it does it retrieve the datasets in the npy file and store them as HDF5 datasets with appropriate names!</p>
+<p>There’s no pre-processing needed for this dataset, as it’s a simple 3D array that the software automatically supports.</p>
 </section>
 <section id="load-in-the-software">
 <h2>Load in the software<a class="headerlink" href="#load-in-the-software" title="Link to this heading"></a></h2>
-<p>Once you’ve got the converted HDF5 file, put it on the VizLab, start up the software and use the ‘Load from disk’ option on the radial menu to load it in. You’ll want to assign each dataset in the menu as shown below:</p>
-<a class="reference external image-reference" href="/images/simplePointCloudMenu.png"><img alt="image" src="../../../_images/simplePointCloudMenu.png" />
+<p>Once you’ve got the data file, put it on the VizLab, start up the software and use the ‘Load from disk’ option on the radial menu to load it in. You’ll want to assign each dataset in the menu as shown below:</p>
+<a class="reference external image-reference" href="/images/basicVolumeMenu.png"><img alt="image" src="../../../_images/basicVolumeMenu.png" />
 </a>
-<p>Once you hit load, the data will initially look like this under the default ‘binary’ colormap:</p>
-<a class="reference external image-reference" href="/images/simplePointCloudGray.png"><img alt="image" src="../../../_images/simplePointCloudGray.png" />
+<p>The data should load in under the ‘default’ colormap for volumes and look like this:</p>
+<a class="reference external image-reference" href="/images/basicVolumeScreenshot.png"><img alt="image" src="../../../_images/basicVolumeScreenshot.png" />
 </a>
-<p>You can change the colormap to ‘hot’ to make the difference in the magnitude velocity scalar more obvious:</p>
-<a class="reference external image-reference" href="/images/simplePointCloudHot.png"><img alt="image" src="../../../_images/simplePointCloudHot.png" />
-</a>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p><a class="reference external" href="https://gala.adrian.pw/en/latest/dynamics/mockstreams.html">https://gala.adrian.pw/en/latest/dynamics/mockstreams.html</a></p>
-</aside>
-</aside>
 </section>
 </section>
 
