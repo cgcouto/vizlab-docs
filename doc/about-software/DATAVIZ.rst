@@ -6,3 +6,4 @@ Data visualization
 
     USERGUIDE
     data-loading/DATALOADING
+    DEVELOPERRESOURCES
