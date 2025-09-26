@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User guide &mdash; vizlab-docs 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a6a68382" />
+      <link rel="stylesheet" type="text/css" href="../_static/fonts.css?v=5583d106" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data loading tutorials" href="data-loading/DATALOADING.html" />
+    <link rel="prev" title="Data visualization" href="DATAVIZ.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vizlab-docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="QUICKSTART.html">System quick-start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-hardware/README.html">About hardware</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="SOFTWAREINDEX.html">Software index</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="DATAVIZ.html">Data visualization</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">User guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#goals-and-guiding-philosophies">Goals and guiding philosophies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#first-steps">First steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-overview">Data overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-your-data">Importing your data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#making-adjustments">Making adjustments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#data-analysis">Data analysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#future-goals">Future goals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="data-loading/DATALOADING.html">Data loading tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="DEVELOPERRESOURCES.html">Developer resources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="STELLARSTREAMS.html">Milky Way stellar streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DEEPFIELDS.html">Hubble deep field galaxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NBODYGAME.html">N-body simulator game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SDSSTOUR.html">SDSS tour</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vizlab-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="SOFTWAREINDEX.html">Software index</a></li>
+          <li class="breadcrumb-item"><a href="DATAVIZ.html">Data visualization</a></li>
+      <li class="breadcrumb-item active">User guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/about-software/USERGUIDE.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-guide">
+<h1>User guide<a class="headerlink" href="#user-guide" title="Link to this heading"></a></h1>
+<section id="goals-and-guiding-philosophies">
+<h2>Goals and guiding philosophies<a class="headerlink" href="#goals-and-guiding-philosophies" title="Link to this heading"></a></h2>
+<p>The goal for this project is to build a platform for scientific research and outreach within astrophysics where different sources of data can be mixed together. To accomplish this, we need to support a wide variety of relevant data types and formats. Currently, we support density datacubes (relevant for hydro sims and radio data cubes), 3d scatterplots (relevant for stellar streams), CAD models (relevant for scientific instruments), 360° images (relevant for outreach) and spectral datacubes (relevant for MaNGA/LVM data among other sources). We also need proper tools for visualizing and analyzing the data, along with an intuitive and accessible UI to string everything together. Consider this page a snapshot of current progress, as development is ongoing!</p>
+</section>
+<section id="first-steps">
+<h2>First steps<a class="headerlink" href="#first-steps" title="Link to this heading"></a></h2>
+<section id="starting-the-software">
+<h3>Starting the software<a class="headerlink" href="#starting-the-software" title="Link to this heading"></a></h3>
+<p>On the VizLab, <a class="reference external" href="QUICKSTART.md">the quick-start guide</a> is what you need to get up and running!</p>
+</section>
+<section id="control-scheme">
+<h3>Control scheme<a class="headerlink" href="#control-scheme" title="Link to this heading"></a></h3>
+<p>Please consult the diagram below for the current control scheme on the VizLab.</p>
+<a class="reference external image-reference" href="/images/controlScheme.png"><img alt="image" src="../_images/controlScheme.png" />
+</a>
+</section>
+<section id="ui-overview">
+<h3>UI overview<a class="headerlink" href="#ui-overview" title="Link to this heading"></a></h3>
+<p>The UI is designed to take use of specialty features of the VizLab, more important of which being the tracked gamepad. Most key settings are on a radial menu which you can bring up by holding the blue button.</p>
+<a class="reference external image-reference" href="/images/radialMenuOpen.png"><img alt="image" src="../_images/radialMenuOpen.png" />
+</a>
+<p>While holding the button, you can move the tracked controller to align the blue simulated wand with a wedge. Once a wedge is selected, releasing the blue button will bring up the menu.</p>
+<a class="reference external image-reference" href="/images/radialMenuSelect.png"><img alt="image" src="../_images/radialMenuSelect.png" />
+</a>
+<p>Aside from the radial menu, you can interact with all menu elements using the green button on the controller.</p>
+</section>
+</section>
+<section id="data-overview">
+<h2>Data overview<a class="headerlink" href="#data-overview" title="Link to this heading"></a></h2>
+<p>There are currently five supported visualization object types supported in the software. The table below summarizes the key information for mapping a data source to one of the visualization objects. Each object type is discussed in more detail farther down.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Object type</p></th>
+<th class="head"><p>Supported formats</p></th>
+<th class="head"><p>Supported datatypes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Density datacubes (x,y,z)</p></td>
+<td><p>.hdf5 nd-arrays and .fits images</p></td>
+<td><p>All numerical formats (int, float, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Point clouds</p></td>
+<td><p>.hdf5 nd-arrays and .fits images</p></td>
+<td><p>All numerical formats (int, float, etc.)</p></td>
+</tr>
+<tr class="row-even"><td><p>CAD models</p></td>
+<td><p>.stl and .stp/.step</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>360° images</p></td>
+<td><p>.jpg and .png</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>Spectral datacubes (x,y,wavelength)</p></td>
+<td><p>.hdf5 nd-arrays and .fits images</p></td>
+<td><p>All numerical formats (int, float, etc.)</p></td>
+</tr>
+</tbody>
+</table>
+<section id="density-datacubes">
+<h3>Density datacubes<a class="headerlink" href="#density-datacubes" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/volumeExample.png"><img alt="image" src="../_images/volumeExample.png" />
+</a>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported dimensionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ignore</p></td>
+<td><p>System will ignore this data source.</p></td>
+<td><p>Any</p></td>
+</tr>
+<tr class="row-odd"><td><p>density</p></td>
+<td><p>3D array of density values.</p></td>
+<td><p>3D</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="point-clouds">
+<h3>Point clouds<a class="headerlink" href="#point-clouds" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/pointCloudsExample.png"><img alt="image" src="../_images/pointCloudsExample.png" />
+</a>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported dimensionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ignore</p></td>
+<td><p>System will ignore this data source.</p></td>
+<td><p>Any</p></td>
+</tr>
+<tr class="row-odd"><td><p>positions</p></td>
+<td><p>Either a static or animated set of 3D positions.</p></td>
+<td><p>2D-3D</p></td>
+</tr>
+<tr class="row-even"><td><p>scalar</p></td>
+<td><p>Either a static or animated set of relevant values for each position.</p></td>
+<td><p>1D-2D</p></td>
+</tr>
+<tr class="row-odd"><td><p>scale</p></td>
+<td><p>Disk size for each position</p></td>
+<td><p>1D-2D</p></td>
+</tr>
+<tr class="row-even"><td><p>color</p></td>
+<td><p>RGB color data for each position.</p></td>
+<td><p>2D-3D</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cad-models">
+<h3>CAD models<a class="headerlink" href="#cad-models" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/CADModelExample.png"><img alt="image" src="../_images/CADModelExample.png" />
+</a>
+<p>No data field specification needed - just provide the CAD file!</p>
+</section>
+<section id="images">
+<h3>360° images<a class="headerlink" href="#images" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/photosphereExample.png"><img alt="image" src="../_images/photosphereExample.png" />
+</a>
+<p>No data field specification needed - just provide the image file!</p>
+</section>
+<section id="spectral-datacubes">
+<h3>Spectral datacubes<a class="headerlink" href="#spectral-datacubes" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/spectralExample.png"><img alt="image" src="../_images/spectralExample.png" />
+</a>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Supported dimensionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ignore</p></td>
+<td><p>System will ignore this data source.</p></td>
+<td><p>Any</p></td>
+</tr>
+<tr class="row-odd"><td><p>spectral</p></td>
+<td><p>3D array of spectral values.</p></td>
+<td><p>3D</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="importing-your-data">
+<h2>Importing your data<a class="headerlink" href="#importing-your-data" title="Link to this heading"></a></h2>
+<section id="in-editor">
+<h3>In-editor<a class="headerlink" href="#in-editor" title="Link to this heading"></a></h3>
+<p>If you want to add visualization objects to the Unity scene before building and running the VizLab software, you can currently do that for density datacubes. Look for Volume Rendering -&gt; Load dataset -&gt; Load HDF5 dataset in the toolbar of the Unity editor as shown below.</p>
+<a class="reference external image-reference" href="/images/loadVolumeInEditor.png"><img alt="image" src="../_images/loadVolumeInEditor.png" />
+</a>
+<p>This will bring up a menu that is similar, if more limited, compared to that found at runtime.</p>
+<a class="reference external image-reference" href="/images/loadVolumeInEditorMenu.png"><img alt="image" src="../_images/loadVolumeInEditorMenu.png" />
+</a>
+<p>In-editor import for other object types is coming soon.</p>
+</section>
+<section id="in-system">
+<h3>In-system<a class="headerlink" href="#in-system" title="Link to this heading"></a></h3>
+<p>To load an object in on the fly, use the radial menu and choose the ‘Load file’ option. This will bring up a standard-looking file browser. Select the relevant data file to proceed.</p>
+<a class="reference external image-reference" href="/images/fileBrowser.png"><img alt="image" src="../_images/fileBrowser.png" />
+</a>
+<p>Once you select the file and hit ‘Load’ in the botton right, the file browser will go away. For certain object types (CAD models) the object will immediately start loading, but for others a new menu will pop up. This is necessary for parsing the input file to pull out relevant data fields. The menu won’t let you load the object unless all necessary pieces are assigned.</p>
+<a class="reference external image-reference" href="/images/loadFromDiskMenu.png"><img alt="image" src="../_images/loadFromDiskMenu.png" />
+</a>
+<p>Consult the data overview section for details on how to assign in your data fields.</p>
+</section>
+</section>
+<section id="making-adjustments">
+<h2>Making adjustments<a class="headerlink" href="#making-adjustments" title="Link to this heading"></a></h2>
+<p>The object manager (accessible from the radial menu) lets you control all global options for loaded visualization objects. At first glance, you’ll see some selection controls on the far left along with the object’s name and an icon for its object type.</p>
+<a class="reference external image-reference" href="/images/globalOptions.png"><img alt="image" src="../_images/globalOptions.png" />
+</a>
+<p>Highlighting the object panel reveals more options to choose from:</p>
+<a class="reference external image-reference" href="/images/globalOptionsHighlight.png"><img alt="image" src="../_images/globalOptionsHighlight.png" />
+</a>
+<p>The first two options are pretty self-explanatory. The eye icon lets you toggle the object’s visibility, while the trash icon lets you delete the object from the scene permanently. The other three are more robust, and will be explained below in separate sections:</p>
+<section id="adjusting-color">
+<h3>Adjusting color<a class="headerlink" href="#adjusting-color" title="Link to this heading"></a></h3>
+<p>The paint bucket icon will bring up a separate menu for adjusting object color. Depending on the object, you have three possible options for coloring: by scalar, from disk, and uniform. With the scalar option, you use a provided scalar/density field along with some set colormap. With from disk, some form of saved per-point or per-piece colormap is loaded and used. And as for uniform color, you can use a GUI color picker to choose an RGB value that gets set uniformly across the entire object.</p>
+<p>Consult the table below for the coloring options supported by each visualization object:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Object type</p></th>
+<th class="head"><p>Supported coloring options</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Density datacubes (x,y,z)</p></td>
+<td><p>by scalar</p></td>
+</tr>
+<tr class="row-odd"><td><p>Point clouds</p></td>
+<td><p>by scalar, from disk, uniform</p></td>
+</tr>
+<tr class="row-even"><td><p>CAD models</p></td>
+<td><p>from disk, uniform</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spectral datacubes (x,y,wavelength)</p></td>
+<td><p>by scalar</p></td>
+</tr>
+</tbody>
+</table>
+<p>When coloring by scalar, you are able to set a base Matplotlib colormap with the colormap dropdown. You can also edit the values in more detail, with a control point slider for editing RGB values and an upper canvas for setting the alpha/transparency across the color gradient.</p>
+<a class="reference external image-reference" href="/images/scalarValueColor.png"><img alt="image" src="../_images/scalarValueColor.png" />
+</a>
+<p>When coloring from disk, you set an already-loaded data field to be the colormap and you are good to go!</p>
+<a class="reference external image-reference" href="/images/fromDiskColor.png"><img alt="image" src="../_images/fromDiskColor.png" />
+</a>
+<p>When coloring uniformly, just use the color picker to set the desired color. The color swatch will show you the currently selected color without having to open the color picker.</p>
+<a class="reference external image-reference" href="/images/uniformColor.png"><img alt="image" src="../_images/uniformColor.png" />
+</a>
+</section>
+<section id="adjusting-data">
+<h3>Adjusting data<a class="headerlink" href="#adjusting-data" title="Link to this heading"></a></h3>
+<p>Each visualization object also has a data menu that you can access with the icon that looks like a set of files. Here you can change which data fields the object is currently visualizing. The ‘Add New Data’ button at the bottom lets you add any number of new data sources to toggle between, so long as they follow the data compatibility rules outlined above.</p>
+<a class="reference external image-reference" href="/images/dataMenu.png"><img alt="image" src="../_images/dataMenu.png" />
+</a>
+</section>
+<section id="adjusting-scale">
+<h3>Adjusting scale<a class="headerlink" href="#adjusting-scale" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/scaleMenu.png"><img alt="image" src="../_images/scaleMenu.png" />
+</a>
+<p>Finally, the stretched box icon brings up the scale menu. This lets you adjust the 3D size of the visualization object that was set on import. You can use the sliders to scale all dimensions dependently or independently of each other.</p>
+</section>
+<section id="if-animated-adjusting-animation-playback">
+<h3>(if animated) Adjusting animation playback<a class="headerlink" href="#if-animated-adjusting-animation-playback" title="Link to this heading"></a></h3>
+<p>For animated visualization objects (just point clouds for now) there are additional global options for controlling their playback. It consists of a slider that tracks playback progress, a pause/play button, and additional settings for controlling the animation’s frame rate and interpolation.</p>
+</section>
+<section id="object-grouping">
+<h3>Object grouping<a class="headerlink" href="#object-grouping" title="Link to this heading"></a></h3>
+<p>One more key feature of the global options menu is object grouping. You can use the grab regions and the toggles on the left of each object panel to group objects together. With these groups, you can then apply certain operations on all the objects together, including cross-sections and animation playback.</p>
+</section>
+</section>
+<section id="data-analysis">
+<h2>Data analysis<a class="headerlink" href="#data-analysis" title="Link to this heading"></a></h2>
+<p>Here are some brief summaries of the data analysis tools currently available in the VizLab.</p>
+<section id="cross-sections">
+<h3>Cross-sections<a class="headerlink" href="#cross-sections" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/crossSectionsExample.png"><img alt="image" src="../_images/crossSectionsExample.png" />
+</a>
+<p>Accessible from the global options menu, you are able to create cross-sections objects that present a desired subset of the visualization object(s) they are assigned to. From the global options menu you can choose which of the shapes to spawn (plane, box, or sphere) as well as adjusting their size and axis lock.</p>
+</section>
+<section id="data-querying">
+<h3>Data querying<a class="headerlink" href="#data-querying" title="Link to this heading"></a></h3>
+<p>Also on the global options menu you can find a menu that lets you do SQL-like querying of a visualization object. For example, for a point cloud dataset you are able to look at any loaded data fields to only show points that are above some mass cutoff, below some halo radius, etc!</p>
+</section>
+<section id="emissions">
+<h3>Emissions<a class="headerlink" href="#emissions" title="Link to this heading"></a></h3>
+<a class="reference external image-reference" href="/images/spectralExample.png"><img alt="image" src="../_images/spectralExample.png" />
+</a>
+<p>You can use this menu to step through the wavelength slices of a spectral datacube and move the control point to adjust the flux vs. wavelength plot on the right. This graph is interactable, with manual zooming functionality. You can also use the buttons at the bottom of the graph to reset and zoom and control which emission lines are visible.</p>
+</section>
+</section>
+<section id="future-goals">
+<h2>Future goals<a class="headerlink" href="#future-goals" title="Link to this heading"></a></h2>
+<p>While development is ongoing, here are some potential future goals for this project:</p>
+<ul class="simple">
+<li><p>Support stronger links to common astronomical databases (including the means the browse and download data in-software), such as ESA’s Gaia</p></li>
+<li><p>Build out networking to allow for multiple instances of the software to collaborate in a shared data space</p></li>
+<li><p>Expand info-sharing and data labelling systems, allowing for further structuring of visualizations into guided lessons for educational purposes</p></li>
+<li><p>Add additional visualization types (ex. vector fields, contour plots, etc.)</p></li>
+<li><p>Experiment with new control schemes for the VizLab, including VR inputs (ex. HTC Vive wands) and hand tracking</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Carnegie Science.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
